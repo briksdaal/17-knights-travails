@@ -16,8 +16,15 @@ class Knight {
     return moves;
   }
 
+  makeMove(move) {
+    this.board.makeMove(move);
+  }
+
+  getBoard() {
+    return this.board.toString();
+  }
+
   static deltas = [
-    [2, 1],
     [1, 2],
     [-1, 2],
     [-2, 1],
@@ -25,9 +32,8 @@ class Knight {
     [-1, -2],
     [1, -2],
     [2, -1],
+    [2, 1],
   ];
 }
 
-const k = new Knight();
-const moves = k.getMoves([0, 0]);
-console.log(moves);
+export default Knight;
